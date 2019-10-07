@@ -347,8 +347,7 @@ public final class Gson {
           out.nullValue();
           return;
         }
-        float floatValue = value.floatValue();
-        checkValidFloatingPoint(floatValue);
+        checkValidFloatingPoint(value.floatValue());
         out.value(value);
       }
     };
