@@ -22,7 +22,7 @@ package com.google.gson.metrics;
  */
 public class BagOfPrimitives {
   public static final long DEFAULT_VALUE = 0;
-  public long longValue;
+  private long longValue;
   public int intValue;
   public boolean booleanValue;
   public String stringValue;
@@ -53,6 +53,10 @@ public class BagOfPrimitives {
     return sb.toString();
   }
 
+  public long getLongValue(){
+    return this.longValue;
+  }
+  
   @Override
   public int hashCode() {
     final int prime = 31;
