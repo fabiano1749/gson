@@ -26,6 +26,7 @@ public class BagOfPrimitives {
   public int intValue;
   public boolean booleanValue;
   public String stringValue;
+  private list<Object> elements;
 
   public BagOfPrimitives() {
     this(DEFAULT_VALUE, 0, false, "");
@@ -43,18 +44,15 @@ public class BagOfPrimitives {
   }
 
   public String getExpectedJson() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("{");
-    sb.append("\"longValue\":").append(longValue).append(",");
-    sb.append("\"intValue\":").append(intValue).append(",");
-    sb.append("\"booleanValue\":").append(booleanValue).append(",");
-    sb.append("\"stringValue\":\"").append(stringValue).append("\"");
-    sb.append("}");
-    return sb.toString();
+    return ExpectedJsonGivenAnArrayOfObjects.getExpectedJson(getElements());
   }
 
   public long getLongValue(){
     return this.longValue;
+  }
+  
+  public getElements(){
+    return this.elements;
   }
   
   @Override
