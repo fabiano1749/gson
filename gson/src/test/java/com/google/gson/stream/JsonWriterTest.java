@@ -52,9 +52,9 @@ public final class JsonWriterTest extends TestCase {
     assertEquals("123.4", string4.toString());
 
     StringWriter string5 = new StringWriter();
-    JsonWriter writert = new JsonWriter(string5);
-    writert.value("a");
-    writert.close();
+    JsonWriter writer5 = new JsonWriter(string5);
+    writer5.value("a");
+    writer5.close();
     assertEquals("\"a\"", string5.toString());
   }
 
