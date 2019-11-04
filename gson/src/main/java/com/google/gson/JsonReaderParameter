@@ -1,0 +1,48 @@
+public interface JsonReaderParameter {
+  public JsonToken peek();
+  public void nextNull();
+  public void nextString();
+}
+
+public class FakeJsonReader implements JsonReaderParameter{
+  
+  public JsonToken peek(){
+    ...
+  ]
+  
+  public void nextNull(){
+    ...
+  }
+  
+  public void nextString(){
+    ...
+  }
+  
+  ...
+  ...
+  ...
+
+}
+
+public class RealJsonReader implemets JsonReaderParameter{
+    private JsonReader reader;
+    
+    public RealJsonReader(JsonReader reader){
+      this.reader = reader;
+    }    
+
+    public JsonToken peek(){
+      return reader.peek();
+    }
+
+    public void nextNull(){
+      return reader.nextNull();    
+    }
+    
+    public void nextString(){
+      return reader.nextString();
+    }
+    
+
+
+}
